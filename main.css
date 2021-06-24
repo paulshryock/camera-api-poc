@@ -1,0 +1,166 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  background: #334;
+  color: white;
+  margin: 0;
+}
+
+@media screen and (min-width: 48em) {
+  body {
+    margin: 2em;
+  }
+}
+
+body * {
+  font: inherit;
+}
+
+.masthead {
+  background: white;
+  color: #334;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 2em 0.5em;
+  width: 65ch;
+}
+
+@media screen and (min-width: 48em) {
+  .masthead {
+    padding: 2em;
+  }
+}
+
+.masthead__icon {
+  font-size: 5em;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.masthead__title {
+  font-size: 2.5em;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.masthead__blurb {
+  margin: 0;
+  padding-left: 2em;
+}
+
+.dashboard {
+  background: white;
+  color: #334;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 2em 0.5em;
+  width: 65ch;
+}
+
+@media screen and (min-width: 48em) {
+  .dashboard {
+    padding: 2em;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 25em;
+}
+
+.button {
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.button[disabled] {
+  cursor: not-allowed;
+}
+
+.video__container {
+  background: radial-gradient(
+    #778,
+    #667
+  );
+  border: 0.5em solid #99a;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  padding-top: calc(100% / (16 / 9));
+  position: relative;
+  width: 25em;
+}
+
+.video__container::after {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.video__container.loading::after {
+  color: white;
+  content: 'Loading...';
+  font-size: 2.5em;
+  font-weight: 300;
+  left: 50%;
+  line-height: 1.2;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.video {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.buttons + .video__container {
+  margin-top: 1em;
+}
+
+.colophon {
+  background: white;
+  color: #334;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 2em 0.5rem;
+  width: 65ch;
+}
+
+@media screen and (min-width: 48em) {
+  .colophon {
+    padding: 2em;
+  }
+}
+
+.colophon__copyright {
+  color: #666;
+  font-size: 0.875em;
+  margin: 0;
+}

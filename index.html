@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Camera Test</title>
+    <meta name="description" content="Quick proof-of-concept for turning the device camera on and off.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📹</text></svg>" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+  </head>
+  <body>
+    <header class='masthead'>
+      <div class='masthead__icon' aria-hidden='true'>📹</div>
+      <h1 class='masthead__title'>Camera test</h1>
+      <p class='masthead__blurb'>Quick proof-of-concept for turning the device camera on and off.</p>
+    </header>
+    <main class='dashboard'>
+      <noscript><p>Sorry, we need JavaScript to access the camera.</p></noscript>
+      <div class='buttons'>
+        <button class='button' data-camera='enable' type='button'>Enable camera</button>
+        <button class='button' data-camera='disable' type='button' disabled>Disable camera</button>
+      </div>
+      <div class='video__container'>
+      <video class='video' id='video' width='400' height='225'></video>
+    </div>
+  </main>
+  <footer class='colophon'>
+    <p class='colophon__copyright'><small>&copy; 2001 Paul Shryock. All rights reserved.</small></p>
+  </footer>
+  <script src='./main.js'></script>
+</body>
+</html>
